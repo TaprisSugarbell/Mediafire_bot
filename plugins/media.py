@@ -9,7 +9,7 @@ async def scrap(bot, update):
     text = " ".join(update.text.split(" ")[1:])
     r = requests.get(text).content
     soup = BeautifulSoup(r, "html.parser")
-    ht = re.findall(r'"https://[\s]{0,1000}[\S]{0,1000}"', str(r))
+    ht = re.findall(r'"https?://[\s]{0,1000}[\S]{0,1000}"', str(r))
     regex = [i.replace('"', "") for i in ht]
     print(regex)
     a = soup.find_all("a")
