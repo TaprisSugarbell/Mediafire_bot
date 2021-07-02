@@ -1,0 +1,45 @@
+{
+    "name": "Mediafire Bot",
+    "description": "Este bot permite realizar descargas de mediafire...",
+    "logo": "https://i.imgur.com/S4Zlx0G.png",
+    "keywords": [
+        "Mediafire",
+        "Bot",
+        "Telegram Bot",
+        "SayuOgiwara"
+    ],
+    "repository": "https://github.com/TaprisSugarbell/Mediafire_Bot",
+    "success_url": "https://telegram.dog/SayuCodez",
+    "env": {
+        "WEBHOOK": {
+            "description": "Dejalo así!",
+            "value": "ANYTHING"
+        },
+        "TOKEN": {
+            "description": "Tu Token de Telegram de @BotFather",
+            "value": ""
+        },
+        "AṔI_ID": {
+            "description": "Obtener de my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Obtener de my.telegram.org",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [{
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }, {
+        "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+    }, {
+        "url": "heroku/python"
+    }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
