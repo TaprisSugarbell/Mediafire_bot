@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 from selenium import webdriver
 from pyrogram import Client, filters
 
@@ -6,6 +7,7 @@ from pyrogram import Client, filters
 async def sel(bot, update):
     text = " ".join(update.text.split())
     ops = webdriver.ChromeOptions()
+    load_dotenv()
     ops.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
     ops.add_argument("headless")
     ops.add_argument("--no-sandbox")
