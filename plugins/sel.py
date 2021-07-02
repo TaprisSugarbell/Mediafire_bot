@@ -9,11 +9,11 @@ async def sel(bot, update):
     ops = webdriver.ChromeOptions()
     load_dotenv()
     ops.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-    ops.add_argument("headless")
+    ops.add_argument("--headless")
     ops.add_argument("--no-sandbox")
     ops.add_argument("--disable-dev-shm-usage")
     with webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=ops) as driver:
-        driver.get(text.strip())
+        driver.get(text)
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         title = driver.find_element_by_xpath("//span[@id='folder_name']").text
         links = driver.find_elements_by_xpath("//a[@class='foldername']")
