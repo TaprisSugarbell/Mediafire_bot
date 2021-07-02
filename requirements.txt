@@ -3,4 +3,5 @@ Pyrogram~=1.2.9
 python-dotenv~=0.18.0
 requests
 selenium
+TgCrypto
 youtube_dl
