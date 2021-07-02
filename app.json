@@ -19,7 +19,7 @@
             "description": "Tu Token de Telegram de @BotFather",
             "value": ""
         },
-        "AṔI_ID": {
+        "API_ID": {
             "description": "Obtener de my.telegram.org",
             "value": ""
         },
